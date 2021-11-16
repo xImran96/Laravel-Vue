@@ -40,7 +40,7 @@ class UserService
 			$user = $this->userRepository->create([
 						'name'=> $request->name,
 						'email'=> $request->email,
-						'password'=> Hash::make($request->email)
+						'password'=> Hash::make($request->password)
 					]);
 
 				return $user;
@@ -69,11 +69,22 @@ class UserService
 
 			$user = $this->userRepository->findByColumnOr(['email' => $request->email], ['*'], []);
 
-			// if(!$user || !Hash::check($request->password, $user->password)) {
-   //              throw new InvalidArgumentException('Invalid credentials');
-   //          }
 
-            return $token = $user->createToken('imrania');
+
+			if(!$user || !Hash::check($request->password, $user->password)) {
+                throw new InvalidArgumentException('Invalid credentials');
+            }
+
+            $token = $user->createToken($user->name);
+            return [
+            	'tokenData'=>[
+            						'type'=>'Bearer', 
+            						"token"=>$token->plainTextToken
+            								],
+            	'user'=>$user
+
+            ];
+            
 
 
 		}catch(Exception $e){
