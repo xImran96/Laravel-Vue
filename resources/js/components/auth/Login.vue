@@ -95,7 +95,7 @@
                   <a
                     href=""
                     class="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
-                    >Imrania</a
+                    >{{ appName }}</a
                   >
                 </div>
               </div>
@@ -151,24 +151,24 @@ export default {
     },
 
     methods:{
-
-
-
-           tryLogin(){
-
-
-
-                this.formIsValid = true;
+          async tryLogin(){
+              this.formIsValid = true;
                 if (this.email === null || !this.email.includes('@') || this.password.length < 0) {
                 this.formIsValid = false;
-
-
+                return;
                 }
-          
 
+                await this.$store.dispatch('login', {
+                  email: this.email,
+                  password: this.password
+                })
 
 
            }
+    },
+
+    computed: {
+    
     }
 
 
