@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Login from "./components/auth/Login.vue";
 import App from "./components/App.vue";
+import Dashboard from "./components/pages/Dashboard.vue";
 
 
 const routes = [
@@ -19,7 +20,7 @@ const routes = [
 		
 		path: "/dashboard",
 		name: "index",
-		component: Login
+		component: Dashboard
 		
 		},
 

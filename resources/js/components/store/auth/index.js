@@ -8,9 +8,7 @@ export default {
 		return {
 			userId: null,
 			token: null,
-			tokenExpiry: null,
-			didLogout: false,
-			appName: 'Imrania'
+			didLogout: false
 		}
 	},
 	mutations,

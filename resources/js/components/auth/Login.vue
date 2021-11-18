@@ -95,7 +95,7 @@
                   <a
                     href=""
                     class="text-white hover:text-blueGray-300 text-sm font-semibold py-1"
-                    >{{ appName }}</a
+                    >WhatsPays</a
                   >
                 </div>
               </div>
@@ -152,16 +152,26 @@ export default {
 
     methods:{
           async tryLogin(){
-              this.formIsValid = true;
-                if (this.email === null || !this.email.includes('@') || this.password.length < 0) {
-                this.formIsValid = false;
-                return;
+
+                this.formIsValid = true;
+                  if (this.email === null || !this.email.includes('@') || this.password.length < 0) {
+                    this.formIsValid = false;
+                  return;
                 }
 
+                try {
                 await this.$store.dispatch('login', {
                   email: this.email,
                   password: this.password
-                })
+                });
+
+                this.$router.replace('/dashboard');
+
+              }catch(err){
+                console.log(err.message);
+              }
+
+
 
 
            }
