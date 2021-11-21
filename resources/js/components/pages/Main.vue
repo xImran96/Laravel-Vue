@@ -49,7 +49,7 @@
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
-                          <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500">
+                                                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-purple-500">
                             <i class="fas fa-chart-pie"></i>
                           </div>
                         </div>
@@ -103,7 +103,7 @@
                           </span>
                         </div>
                         <div class="relative w-auto pl-4 flex-initial">
-                          <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-lightBlue-500">
+                                              <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-green-500">
                             <i class="fas fa-percent"></i>
                           </div>
                         </div>

@@ -19618,20 +19618,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _this.$store.dispatch('logout');
 
               case 4:
-                _context.next = 9;
+                _this.$router.replace('/');
+
+                _context.next = 10;
                 break;
 
-              case 6:
-                _context.prev = 6;
+              case 7:
+                _context.prev = 7;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0.message);
 
-              case 9:
+              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 6]]);
+        }, _callee, null, [[1, 7]]);
       }))();
     }
   }
@@ -19938,25 +19940,11 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Dashboard ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
   "class": "items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "./settings.html",
-  "class": "text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fas fa-tools mr-2 text-sm text-blueGray-300"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Settings ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "items-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "./tables.html",
   "class": "text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fas fa-table mr-2 text-sm text-blue-300"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Tables ")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
-  "class": "items-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "./maps.html",
-  "class": "text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fas fa-map-marked mr-2 text-sm text-blueGray-300"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Maps ")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Divider "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+  "class": "fas fa-users mr-2 text-sm text-blueGray-300"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Employee's ")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Divider "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "my-4 md:min-w-full"
 })])], -1
 /* HOISTED */
@@ -20002,7 +19990,7 @@ var _hoisted_4 = {
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   "class": "text-white font-bold-500 block",
-  href: "#pablo",
+  href: "#",
   onclick: "openDropdown(event,'user-dropdown')"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Muhammad Imran "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fa fa-angle-double-down"
@@ -20094,7 +20082,7 @@ var _hoisted_1 = {
   "class": "relative md:ml-64 bg-blueGray-50"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative bg-pink-600 md:pt-32 pb-32 pt-12\"><div class=\"px-4 md:px-10 mx-auto w-full\"><div><!-- Card stats --><div class=\"flex flex-wrap\"><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Traffic </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 350,897 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500\"><i class=\"far fa-chart-bar\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-emerald-500 mr-2\"><i class=\"fas fa-arrow-up\"></i> 3.48% </span><span class=\"whitespace-nowrap\"> Since last month </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> New users </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 2,356 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500\"><i class=\"fas fa-chart-pie\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-red-500 mr-2\"><i class=\"fas fa-arrow-down\"></i> 3.48% </span><span class=\"whitespace-nowrap\"> Since last week </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Sales </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 924 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500\"><i class=\"fas fa-users\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-orange-500 mr-2\"><i class=\"fas fa-arrow-down\"></i> 1.10% </span><span class=\"whitespace-nowrap\"> Since yesterday </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Performance </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 49,65% </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-lightBlue-500\"><i class=\"fas fa-percent\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-emerald-500 mr-2\"><i class=\"fas fa-arrow-up\"></i> 12% </span><span class=\"whitespace-nowrap\"> Since last month </span></p></div></div></div></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative bg-pink-600 md:pt-32 pb-32 pt-12\"><div class=\"px-4 md:px-10 mx-auto w-full\"><div><!-- Card stats --><div class=\"flex flex-wrap\"><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Traffic </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 350,897 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500\"><i class=\"far fa-chart-bar\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-emerald-500 mr-2\"><i class=\"fas fa-arrow-up\"></i> 3.48% </span><span class=\"whitespace-nowrap\"> Since last month </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> New users </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 2,356 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-purple-500\"><i class=\"fas fa-chart-pie\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-red-500 mr-2\"><i class=\"fas fa-arrow-down\"></i> 3.48% </span><span class=\"whitespace-nowrap\"> Since last week </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Sales </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 924 </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500\"><i class=\"fas fa-users\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-orange-500 mr-2\"><i class=\"fas fa-arrow-down\"></i> 1.10% </span><span class=\"whitespace-nowrap\"> Since yesterday </span></p></div></div></div><div class=\"w-full lg:w-6/12 xl:w-3/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg\"><div class=\"flex-auto p-4\"><div class=\"flex flex-wrap\"><div class=\"relative w-full pr-4 max-w-full flex-grow flex-1\"><h5 class=\"text-blueGray-400 uppercase font-bold text-xs\"> Performance </h5><span class=\"font-semibold text-xl text-blueGray-700\"> 49,65% </span></div><div class=\"relative w-auto pl-4 flex-initial\"><div class=\"text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-green-500\"><i class=\"fas fa-percent\"></i></div></div></div><p class=\"text-sm text-blueGray-400 mt-4\"><span class=\"text-emerald-500 mr-2\"><i class=\"fas fa-arrow-up\"></i> 12% </span><span class=\"whitespace-nowrap\"> Since last month </span></p></div></div></div></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_top_nav = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("top-nav");
@@ -20247,16 +20235,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 3:
               responce = _context2.sent;
-              console.log(response);
               localStorage.removeItem('userId');
               localStorage.removeItem('access_token');
-              state.didLogout = true;
               contaxt.commit('setUser', {
                 userId: null,
                 token: null
               });
 
-            case 9:
+            case 7:
             case "end":
               return _context2.stop();
           }
@@ -20385,10 +20371,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 /* harmony import */ var _components_auth_Login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/auth/Login.vue */ "./resources/js/components/auth/Login.vue");
 /* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
 /* harmony import */ var _components_pages_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/Dashboard.vue */ "./resources/js/components/pages/Dashboard.vue");
+/* harmony import */ var _components_store_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/store/index */ "./resources/js/components/store/index.js");
+
 
 
 
@@ -20400,12 +20388,30 @@ var routes = [{
 }, {
   path: "/dashboard",
   name: "index",
-  component: _components_pages_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  component: _components_pages_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+  meta: {
+    requiresAuth: true
+  }
+}, {
+  path: "/employees",
+  name: "employees",
+  component: _components_pages_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+  meta: {
+    requiresAuth: true
+  }
 }];
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue_router__WEBPACK_IMPORTED_MODULE_3__.createRouter)({
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_3__.createWebHistory)(),
+var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_4__.createRouter)({
+  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_4__.createWebHistory)(),
   routes: routes
-}));
+});
+router.beforeEach(function (to, _, next) {
+  if (to.meta.requiresAuth && !_components_store_index__WEBPACK_IMPORTED_MODULE_3__["default"].getters.token) {
+    next('/');
+  } else {
+    next();
+  }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
 
 /***/ }),
 

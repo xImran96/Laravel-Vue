@@ -124,35 +124,14 @@
 
               <li class="items-center">
                 <a
-                  href="./settings.html"
-                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-                >
-                  <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
-                  Settings
-                </a>
-              </li>
-
-              <li class="items-center">
-                <a
                   href="./tables.html"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
-                  <i class="fas fa-table mr-2 text-sm text-blue-300"></i>
-                  Tables
+                  <i class="fas fa-users mr-2 text-sm text-blueGray-300"></i>
+                  Employee's
                 </a>
               </li>
 
-              <li class="items-center">
-                <a
-                  href="./maps.html"
-                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-                >
-                  <i
-                    class="fas fa-map-marked mr-2 text-sm text-blueGray-300"
-                  ></i>
-                  Maps
-                </a>
-              </li>
             </ul>
 
             <!-- Divider -->

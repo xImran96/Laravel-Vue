@@ -44,10 +44,9 @@ export default {
 							}
 					});
 
-			console.log(response);
+			
 			localStorage.removeItem('userId');
 			localStorage.removeItem('access_token');
-			state.didLogout = true;
 
 			contaxt.commit('setUser', {
 					userId: null,

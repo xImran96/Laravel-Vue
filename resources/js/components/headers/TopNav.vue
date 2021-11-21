@@ -13,7 +13,7 @@
             >
               <a
                 class="text-white font-bold-500 block"
-                href="#pablo"
+                href="#"
                 onclick="openDropdown(event,'user-dropdown')"
               >
                Muhammad Imran <i class="fa fa-angle-double-down"></i>
@@ -55,6 +55,7 @@ export default {
 			confirm('Are you Sure');
 			try{
 				await this.$store.dispatch('logout');
+        this.$router.replace('/');
 			}catch(err){
 				console.log(err.message);
 			}
