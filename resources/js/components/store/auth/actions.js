@@ -2,8 +2,7 @@ import axios from 'axios';
 
 export default {
 	async login(contaxt, payload){
-			
-
+		
 		const response = await axios({
 		  method: 'POST',
   			url: `http://127.0.0.1:8000/api/login`,

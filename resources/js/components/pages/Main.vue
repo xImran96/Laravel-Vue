@@ -123,13 +123,18 @@
             </div>
           </div>
         </div>
+        <the-chart></the-chart>
     </div>
+
 </template>
 <script>
-import TopNav from '../headers/TopNav.vue'
+import TopNav from '../headers/TopNav.vue';
+
+import TheChart from './Chart.vue';
 export default {
 	components: {
-		TopNav
+		TopNav,
+    TheChart
 	}
 
 };

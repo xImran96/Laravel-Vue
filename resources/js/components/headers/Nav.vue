@@ -113,23 +113,23 @@
 
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
               <li class="items-center">
-                <a
-                  href="./dashboard.html"
+                <router-link
+                  to="/dashboard"
                   class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
                 >
                   <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                   Dashboard
-                </a>
+                </router-link>
               </li>
 
               <li class="items-center">
-                <a
-                  href="./tables.html"
+                <router-link
+                  to="/employees"
                   class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i class="fas fa-users mr-2 text-sm text-blueGray-300"></i>
                   Employee's
-                </a>
+                </router-link>
               </li>
 
             </ul>

@@ -4,6 +4,7 @@ import Login from "./components/auth/Login.vue";
 import App from "./components/App.vue";
 import Dashboard from "./components/pages/Dashboard.vue";
 import store from './components/store/index';
+import Employees from "./components/pages/Employees.vue";
 
 
 const routes = [
@@ -29,7 +30,7 @@ const routes = [
 		{
 			path: "/employees",
 			name: "employees",
-			component: Dashboard,
+			component: Employees,
 			meta: {
 				requiresAuth: true
 				}
