@@ -6,7 +6,7 @@ import getters from './getters';
 export default {
 	state(){
 		return {
-			employees: null,
+			employees: null
 		}
 	},
 	mutations,

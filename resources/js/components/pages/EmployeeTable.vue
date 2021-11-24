@@ -24,93 +24,40 @@
                     <thead>
                       <tr>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Page name
+                          Name
                         </th>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Visitors
+                          Email
                         </th>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Unique users
+                          Phone
                         </th>
                         <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Bounce rate
+                          Salary
+                        </th>
+                       <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Employer
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr v-for="result in results" :key="result.id">
                         <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                          /argon/
+                          {{result.name}}
                         </th>
                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          4,569
+                          {{ result.email }}
                         </td>
                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          340
+                          {{result.phone}}
                         </td>
                         <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                          46,53%
+                          <!-- <i class="fas fa-arrow-down text-orange-500 mr-4"></i> -->
+                          {{result.salary}}
                         </td>
-                      </tr>
-                      <tr>
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                          /argon/index.html
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          3,985
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          319
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                          46,53%
-                        </td>
-                      </tr>
-                      <tr>
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                          /argon/charts.html
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          3,513
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          294
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                          36,49%
-                        </td>
-                      </tr>
-                      <tr>
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                          /argon/tables.html
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          2,050
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          147
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                          50,87%
-                        </td>
-                      </tr>
-                      <tr>
-                        <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                          /argon/profile.html
-                        </th>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          1,795
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          190
-                        </td>
-                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                          <i class="fas fa-arrow-down text-red-500 mr-4"></i>
-                          46,53%
+                       <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                          <!-- <i class="fas fa-arrow-down text-orange-500 mr-4"></i> -->
+                          {{result.user.name}}
                         </td>
                       </tr>
                     </tbody>
@@ -128,7 +75,35 @@ import TheFooter from '../headers/Footer.vue';
 export default {
   components: {
     TheFooter
-  }
+  },
+
+  data(){
+    return {
+      
+      }
+  },
+
+  computed: {
+      results(){
+        return this.$store.getters['getEmployees'];
+      }
+  },
+
+  mounted(){
+      this.loadEmpoloyees();
+      this.theData();
+    },
+
+  methods: {
+        loadEmpoloyees(){
+          this.$store.dispatch('getEmployees');
+        },
+
+        theData(){
+            console.log(this.$store.getters['getEmployees'])
+          }
+    }
+
 }
 
 </script>

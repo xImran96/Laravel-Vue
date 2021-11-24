@@ -20,7 +20,7 @@ const routes = [
 		{
 			path: "/dashboard",
 			name: "index",
-			component: Dashboard,
+			component: Dashboard, 
 			meta: {
 				requiresAuth: true
 				}

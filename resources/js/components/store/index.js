@@ -1,8 +1,11 @@
 import { createStore } from 'vuex';
 import authModule from './auth/index'
+import employeeModule from './employees/index'
 const store = createStore({
 	modules: {
-		auth: authModule
+		auth: authModule,
+		employee: employeeModule
+		
 	},
 
 	state(){

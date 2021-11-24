@@ -19594,7 +19594,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      routeName: this.$route.name
+    };
+  }
+});
 
 /***/ }),
 
@@ -19717,6 +19723,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     TheFooter: _headers_Footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {};
+  },
+  computed: {
+    results: function results() {
+      return this.$store.getters['getEmployees'];
+    }
+  },
+  mounted: function mounted() {
+    this.loadEmpoloyees();
+    this.theData();
+  },
+  methods: {
+    loadEmpoloyees: function loadEmpoloyees() {
+      this.$store.dispatch('getEmployees');
+    },
+    theData: function theData() {
+      console.log(this.$store.getters['getEmployees']);
+    }
   }
 });
 
@@ -20145,7 +20171,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, _hoisted_4, _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Divider "), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Heading "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("      <h6\r\n              class=\"md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline\"\r\n            >\r\n              Admin Layout Pages\r\n            </h6> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navigation "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/dashboard",
-    "class": "text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
+    "class": "text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_12, _hoisted_13];
@@ -20270,7 +20296,7 @@ var _hoisted_1 = {
   "class": "px-4 md:px-10 mx-auto w-full -m-24"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-wrap\"><div class=\"w-full xl:w-8/12 mb-12 xl:mb-0 px-4\"><div class=\"relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-gray-700\"><div class=\"rounded-t mb-0 px-4 py-3 bg-transparent\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full max-w-full flex-grow flex-1\"><h6 class=\"uppercase text-white mb-1 text-xs font-semibold\"> Overview </h6><h2 class=\"text-white text-xl font-semibold\"> Sales value </h2></div></div></div><div class=\"p-4 flex-auto\"><!-- Chart --><div class=\"relative h-350-px\"><div class=\"chartjs-size-monitor\"><div class=\"chartjs-size-monitor-expand\"><div class=\"\"></div></div><div class=\"chartjs-size-monitor-shrink\"><div class=\"\"></div></div></div><canvas id=\"line-chart\" style=\"display:block;height:350px;width:725px;\" width=\"906\" height=\"437\" class=\"chartjs-render-monitor\"></canvas></div></div></div></div><div class=\"w-full xl:w-4/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded\"><div class=\"rounded-t mb-0 px-4 py-3 bg-transparent\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full max-w-full flex-grow flex-1\"><h6 class=\"uppercase text-blueGray-400 mb-1 text-xs font-semibold\"> Performance </h6><h2 class=\"text-blueGray-700 text-xl font-semibold\"> Total orders </h2></div></div></div><div class=\"p-4 flex-auto\"><!-- Chart --><div class=\"relative h-350-px\"><div class=\"chartjs-size-monitor\"><div class=\"chartjs-size-monitor-expand\"><div class=\"\"></div></div><div class=\"chartjs-size-monitor-shrink\"><div class=\"\"></div></div></div><canvas id=\"bar-chart\" width=\"412\" height=\"437\" style=\"display:block;height:350px;width:330px;\" class=\"chartjs-render-monitor\"></canvas></div></div></div></div></div><div class=\"flex flex-wrap mt-4\"><div class=\"w-full xl:w-8/12 mb-12 xl:mb-0 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded\"><div class=\"rounded-t mb-0 px-4 py-3 border-0\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full px-4 max-w-full flex-grow flex-1\"><h3 class=\"font-semibold text-base text-blueGray-700\"> Page visits </h3></div><div class=\"relative w-full px-4 max-w-full flex-grow flex-1 text-right\"><button class=\"bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150\" type=\"button\"> See all </button></div></div></div><div class=\"block w-full overflow-x-auto\"><!-- Projects table --><table class=\"items-center w-full bg-transparent border-collapse\"><thead><tr><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Page name </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Visitors </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Unique users </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Bounce rate </th></tr></thead><tbody><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/ </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 4,569 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 340 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-up text-emerald-500 mr-4\"></i> 46,53% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/index.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 3,985 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 319 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> 46,53% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/charts.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 3,513 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 294 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> 36,49% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/tables.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 2,050 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 147 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-up text-emerald-500 mr-4\"></i> 50,87% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/profile.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 1,795 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 190 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-red-500 mr-4\"></i> 46,53% </td></tr></tbody></table></div></div></div><div class=\"w-full xl:w-4/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded\"><div class=\"rounded-t mb-0 px-4 py-3 border-0\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full px-4 max-w-full flex-grow flex-1\"><h3 class=\"font-semibold text-base text-blueGray-700\"> Social traffic </h3></div><div class=\"relative w-full px-4 max-w-full flex-grow flex-1 text-right\"><button class=\"bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150\" type=\"button\"> See all </button></div></div></div><div class=\"block w-full overflow-x-auto\"><!-- Projects table --><table class=\"items-center w-full bg-transparent border-collapse\"><thead class=\"thead-light\"><tr><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Referral </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Visitors </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px\"></th></tr></thead><tbody><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> Facebook </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 1,480 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><div class=\"flex items-center\"><span class=\"mr-2\">60%</span><div class=\"relative w-full\"><div class=\"overflow-hidden h-2 text-xs flex rounded bg-red-200\"><div style=\"width:60%;\" class=\"shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500\"></div></div></div></div></td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> Facebook </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 5,480 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><div class=\"flex items-center\"><span class=\"mr-2\">70%</span><div class=\"relative w-full\"><div class=\"overflow-hidden h-2 text-xs flex rounded bg-emerald-200\"><div style=\"width:70%;\" class=\"shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500\"></div></div></div></div></td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> Google </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 4,807 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><div class=\"flex items-center\"><span class=\"mr-2\">80%</span><div class=\"relative w-full\"><div class=\"overflow-hidden h-2 text-xs flex rounded bg-purple-200\"><div style=\"width:80%;\" class=\"shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500\"></div></div></div></div></td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> Instagram </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 3,678 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><div class=\"flex items-center\"><span class=\"mr-2\">75%</span><div class=\"relative w-full\"><div class=\"overflow-hidden h-2 text-xs flex rounded bg-lightBlue-200\"><div style=\"width:75%;\" class=\"shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-lightBlue-500\"></div></div></div></div></td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> twitter </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 2,645 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><div class=\"flex items-center\"><span class=\"mr-2\">30%</span><div class=\"relative w-full\"><div class=\"overflow-hidden h-2 text-xs flex rounded bg-orange-200\"><div style=\"width:30%;\" class=\"shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500\"></div></div></div></div></td></tr></tbody></table></div></div></div></div>", 2);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-wrap\"><div class=\"w-full xl:w-8/12 mb-12 xl:mb-0 px-4\"><div class=\"relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-gray-700\"><div class=\"rounded-t mb-0 px-4 py-3 bg-transparent\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full max-w-full flex-grow flex-1\"><h6 class=\"uppercase text-white mb-1 text-xs font-semibold\"> Overview </h6><h2 class=\"text-white text-xl font-semibold\"> Sales value </h2></div></div></div><div class=\"p-4 flex-auto\"><!-- Chart --><div class=\"relative h-350-px\"><div class=\"chartjs-size-monitor\"><div class=\"chartjs-size-monitor-expand\"><div class=\"\"></div></div><div class=\"chartjs-size-monitor-shrink\"><div class=\"\"></div></div></div><canvas id=\"line-chart\" style=\"display:block;height:350px;width:725px;\" width=\"906\" height=\"437\" class=\"chartjs-render-monitor\"></canvas></div></div></div></div><div class=\"w-full xl:w-4/12 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded\"><div class=\"rounded-t mb-0 px-4 py-3 bg-transparent\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full max-w-full flex-grow flex-1\"><h6 class=\"uppercase text-blueGray-400 mb-1 text-xs font-semibold\"> Performance </h6><h2 class=\"text-blueGray-700 text-xl font-semibold\"> Total orders </h2></div></div></div><div class=\"p-4 flex-auto\"><!-- Chart --><div class=\"relative h-350-px\"><div class=\"chartjs-size-monitor\"><div class=\"chartjs-size-monitor-expand\"><div class=\"\"></div></div><div class=\"chartjs-size-monitor-shrink\"><div class=\"\"></div></div></div><canvas id=\"bar-chart\" width=\"412\" height=\"437\" style=\"display:block;height:350px;width:330px;\" class=\"chartjs-render-monitor\"></canvas></div></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_the_footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("the-footer");
@@ -20319,13 +20345,74 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "px-4 md:px-10 mx-auto w-full -m-24"
 };
+var _hoisted_2 = {
+  "class": "flex flex-wrap"
+};
+var _hoisted_3 = {
+  "class": "w-full xl:w-12/12 mb-12 xl:mb-0 px-4"
+};
+var _hoisted_4 = {
+  "class": "relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-wrap\"><div class=\"w-full xl:w-12/12 mb-12 xl:mb-0 px-4\"><div class=\"relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded\"><div class=\"rounded-t mb-0 px-4 py-3 border-0\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full px-4 max-w-full flex-grow flex-1\"><h3 class=\"font-semibold text-base text-blueGray-700\"> Page visits </h3></div><div class=\"relative w-full px-4 max-w-full flex-grow flex-1 text-right\"><button class=\"bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150\" type=\"button\"> See all </button></div></div></div><div class=\"block w-full overflow-x-auto\"><!-- Projects table --><table class=\"items-center w-full bg-transparent border-collapse\"><thead><tr><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Page name </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Visitors </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Unique users </th><th class=\"px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left\"> Bounce rate </th></tr></thead><tbody><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/ </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 4,569 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 340 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-up text-emerald-500 mr-4\"></i> 46,53% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/index.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 3,985 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 319 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> 46,53% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/charts.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 3,513 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 294 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> 36,49% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/tables.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 2,050 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 147 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-up text-emerald-500 mr-4\"></i> 50,87% </td></tr><tr><th class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left\"> /argon/profile.html </th><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 1,795 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"> 190 </td><td class=\"border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4\"><i class=\"fas fa-arrow-down text-red-500 mr-4\"></i> 46,53% </td></tr></tbody></table></div></div></div></div>", 1);
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"rounded-t mb-0 px-4 py-3 border-0\"><div class=\"flex flex-wrap items-center\"><div class=\"relative w-full px-4 max-w-full flex-grow flex-1\"><h3 class=\"font-semibold text-base text-blueGray-700\"> Page visits </h3></div><div class=\"relative w-full px-4 max-w-full flex-grow flex-1 text-right\"><button class=\"bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150\" type=\"button\"> See all </button></div></div></div>", 1);
 
+var _hoisted_6 = {
+  "class": "block w-full overflow-x-auto"
+};
+var _hoisted_7 = {
+  "class": "items-center w-full bg-transparent border-collapse"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+}, " Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+}, " Email "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+}, " Phone "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+}, " Salary "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  "class": "px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+}, " Employer ")])], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = {
+  "class": "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left"
+};
+var _hoisted_10 = {
+  "class": "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+};
+var _hoisted_11 = {
+  "class": "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+};
+var _hoisted_12 = {
+  "class": "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+};
+var _hoisted_13 = {
+  "class": "border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_the_footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("the-footer");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_the_footer)]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Projects table "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.results, function (result) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      key: result.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(result.name), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(result.email), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(result.phone), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(result.salary), 1
+    /* TEXT */
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <i class=\"fas fa-arrow-down text-orange-500 mr-4\"></i> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(result.user.name), 1
+    /* TEXT */
+    )])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_the_footer)]);
 }
 
 /***/ }),
@@ -20655,6 +20742,141 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/store/employees/actions.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/store/employees/actions.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  getEmployees: function getEmployees(context, payload) {
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var data, response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              data = localStorage.getItem('employees');
+
+              if (data) {
+                _context.next = 7;
+                break;
+              }
+
+              _context.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()({
+                method: 'GET',
+                url: "http://127.0.0.1:8000/api/employees",
+                headers: {
+                  'Accept': '*/*',
+                  'Content-Type': 'application/json'
+                }
+              });
+
+            case 4:
+              response = _context.sent;
+              data = JSON.stringify(response.data.data);
+              localStorage.setItem('employees', data);
+
+            case 7:
+              context.commit('setEmployees', data);
+
+            case 8:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/store/employees/getters.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/store/employees/getters.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  getEmployees: function getEmployees(state) {
+    return JSON.parse(state.employees) || JSON.parse(localStorage.getItem('employees'));
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/store/employees/index.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/store/employees/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mutations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mutations */ "./resources/js/components/store/employees/mutations.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./resources/js/components/store/employees/actions.js");
+/* harmony import */ var _getters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./getters */ "./resources/js/components/store/employees/getters.js");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  state: function state() {
+    return {
+      employees: null
+    };
+  },
+  mutations: _mutations__WEBPACK_IMPORTED_MODULE_0__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_1__["default"],
+  getters: _getters__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/store/employees/mutations.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/store/employees/mutations.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  setEmployees: function setEmployees(state, payload) {
+    state.employees = payload;
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/components/store/index.js":
 /*!************************************************!*\
   !*** ./resources/js/components/store/index.js ***!
@@ -20666,13 +20888,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
 /* harmony import */ var _auth_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth/index */ "./resources/js/components/store/auth/index.js");
+/* harmony import */ var _employees_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./employees/index */ "./resources/js/components/store/employees/index.js");
 
 
-var store = (0,vuex__WEBPACK_IMPORTED_MODULE_1__.createStore)({
+
+var store = (0,vuex__WEBPACK_IMPORTED_MODULE_2__.createStore)({
   modules: {
-    auth: _auth_index__WEBPACK_IMPORTED_MODULE_0__["default"]
+    auth: _auth_index__WEBPACK_IMPORTED_MODULE_0__["default"],
+    employee: _employees_index__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   state: function state() {
     return {};

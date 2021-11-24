@@ -115,13 +115,13 @@
               <li class="items-center">
                 <router-link
                   to="/dashboard"
-                  class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
+                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
                 >
                   <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                   Dashboard
                 </router-link>
               </li>
-
+              
               <li class="items-center">
                 <router-link
                   to="/employees"
@@ -145,8 +145,12 @@
 
 <script>
 export default {
-
-};
+    data(){
+        return {
+            routeName: this.$route.name
+          }
+      }
+};  
 </script>
 <style scoped>
   
