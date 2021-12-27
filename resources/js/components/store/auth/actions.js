@@ -37,8 +37,7 @@ export default {
 		  				method: 'POST',
   							url: `http://127.0.0.1:8000/api/logout`,
   							headers: {
- 								'Accept': '*/*',	
-								'Content-Type': 'application/json',
+								'Accept': 'application/json',
 								'Authorization':`Bearer ${contaxt.rootGetters.token}`
 							}
 					});

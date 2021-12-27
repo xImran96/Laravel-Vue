@@ -4,14 +4,14 @@ export default {
        async getEmployees(context, payload){
             let data;
             data = localStorage.getItem('employees')
-            if(!data){
+            if(!data || data.length === 0){
 
                 const response = await axios({
                 method: 'GET',
                     url: `http://127.0.0.1:8000/api/employees`,
                     headers: {
-                       'Accept': '*/*',	
-                       'Content-Type': 'application/json'
+                       'Accept': 'application/json',
+                       'Authorization':`Bearer ${context.rootGetters.token}`
                   }
               });
 

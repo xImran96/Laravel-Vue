@@ -51,9 +51,8 @@ class UserController extends BaseController
 
     public function logout()
     {
-        return "it works";
-        // request()->user()->currentAccessToken()->delete();
-        // return response()->json(['status'=>'true']);   
+        request()->user()->currentAccessToken()->delete();
+        return response()->json(['status'=>'true']);   
     }
 
 }

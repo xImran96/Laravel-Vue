@@ -85,7 +85,7 @@ export default {
 
   computed: {
       results(){
-        return this.$store.getters['getEmployees'];
+        return this.$store.getters['employee/getEmployees'];
       }
   },
 
@@ -96,12 +96,14 @@ export default {
 
   methods: {
         loadEmpoloyees(){
-          this.$store.dispatch('getEmployees');
+          this.$store.dispatch('employee/getEmployees');
         },
 
         theData(){
-            console.log(this.$store.getters['getEmployees'])
-          }
+            console.log(this.$store.getters)
+          },
+
+  
     }
 
 }
