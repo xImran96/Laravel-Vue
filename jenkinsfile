@@ -3,15 +3,18 @@ pipeline {
     // agent {'label of agent'}
     stages {
             stage('Composer installation'){
-               step{
+               steps {
                 sh "echo initializing composer"
                 sh "composer install";
                 }
             }
             stage('Vue Installation'){
-                sh "echo initializing composer"
-                sh "npm install"
-                sh "npm run dev"
+                steps {
+                    sh "echo initializing composer"
+                    sh "npm install"
+                    sh "npm run dev"
+
+                }
             }
     }
 }
